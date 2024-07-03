@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt("점수를 입력하세요"))
+        switch (true){
+            case (num >= 90):{
+                document.write(`<h1>${num}은 A등급입니다</h1>`)
+                break
+            }
+            case (num >= 80):{
+                document.write(`<h1>${num}은 B등급입니다</h1>`)
+                break
+            }
+            case (num >= 70):{
+                document.write(`<h1>${num}은 C등급입니다</h1>`)
+                break
+            }
+            case (num >= 60):{
+                document.write(`<h1>${num}은 D등급입니다</h1>`)
+                break
+            }
+            case (num >= 0):{
+                document.write(`<h1>${num}은 F등급입니다</h1>`)
+                break
+            }
+            case (isNaN(num)):{
+                window.alert("점수는 숫자를 입력하세요")
+                break
+            }
+        }
+
+    </script>
+
+</body>
+</html>
