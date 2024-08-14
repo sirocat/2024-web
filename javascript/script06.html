@@ -19,17 +19,19 @@
         let memNum = Number(prompt("입장객은 몇 명인가요?"));
         let colNum = Number(prompt("한줄에 몇 명이 있습니까??"));
         document.write(`<h1>자리 배치도</h1>`)
-        document.write(`<table>`)
+        document.write(`<table>`);
         for(let i = 1; i <= memNum; i++) {
-            if (i % colNum === 1) {
-                document.write(`<tr>`)
+            if (i % colNum === 1) {  //나눠서 1일때
+                document.write(`<tr>`);
             }
-            document.write(`<td>좌석 ${i}</td>`)
-            if (i % colNum === 0 || i === memNum) {
-                document.write(`</tr>`)
+            document.write(`<td>좌석 ${i}</td>`);  // 좌석 번호 출력
+
+            if (i % colNum === 0 || i === memNum) {  //나눠서 0이나 memNum이될때
+                document.write(`</tr>`);
             }
         }
-        document.write(`</table>`)
+
+        document.write(`</table>`);  // 테이블 끝
     </script>
 </body>
 </html>
