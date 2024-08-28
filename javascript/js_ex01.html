@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const max = function (array) {
+            let output = array[0];
+            for (let i = 1; i < array.length; i++) {
+                if (array[i] > output) {
+                    output = array[i];
+                }
+            }
+            return output;
+        }
+
+        console.log(max([1, 2, 3, 4]));
+    </script>
+</body>
+</html>
