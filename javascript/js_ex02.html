@@ -3,42 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        p{text-align: center}
-    </style>
 </head>
 <body>
-    <div id="galleryZone">
-        <p><img src="../image/mov01.jpg" id="photo" alt=""></p>
-        <p>
-            <button onclick="gallery(0)">이전</button>
-            <button onclick="gallery(1)">다음</button>
-        </p>
-    </div>
-</body>
-
-<script>
-    let ej = 1;
-    const de = 8;
-
-    function gallery(direction) {
-        if (direction === 1) {
-            if (ej === de) {
-                alert("마지막 입니다!");
-                return;
-            } else {
-                ej++;
+    <script>
+        const max = function (array) {
+            let output = array[0];
+            for (let i = 1; i < array.length; i++) {
+                if (array[i] > output) {
+                    output = array[i];
+                }
             }
-        } else {
-            if (ej === 1) {
-                alert("처음 입니다!");
-                return;
-            } else {
-                ej--;
-            }
+            return output;
         }
-        let imgTag = document.querySelector("#photo");
-        imgTag.setAttribute("src", `../image/mov0${ej}.jpg`);
-    }
-</script>
+
+        console.log(max([1, 2, 3, 4]));
+    </script>
+</body>
 </html>
