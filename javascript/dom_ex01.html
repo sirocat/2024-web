@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>요소 선택하기</h1>
+<ul>
+    <li class="first">첫 번쨰 아이템이요!</li>
+    <li>두 번쨰 아이템이요!</li>
+    <li class="even">세 번쨰 아이템이요!</li>
+    <li>네 번쨰 아이템이요!</li>
+    <li class="even">다섯 번쨰 아이템이요!</li>
+</ul>
+    <script>
+    const lis = document.querySelectorAll('li');
+
+
+    for(const li of lis){
+        if (li.classList.contains('first')) {
+            li.style.color = "red";
+        } else if (li.classList.contains('even')) {
+            li.style.color = "black";
+        } else {
+            li.style.color = "blue";
+        }
+    }
+    </script>
+</body>
+</html>

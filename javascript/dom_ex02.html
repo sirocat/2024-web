@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>요소 선택하기</h1>
+<ul>
+    <li class="first">첫 번쨰 아이템이요!</li>
+    <li>두 번쨰 아이템이요!</li>
+    <li class="even">세 번쨰 아이템이요!</li>
+    <li>네 번쨰 아이템이요!</li>
+    <li class="even">다섯 번쨰 아이템이요!</li>
+</ul>
+<script>
+    let lis = document.querySelectorAll('li');
+    lis.forEach((li,index) =>{
+        if(index % 2 === 1) li.style.color = "blue";
+        if(index === 0) li.style.color = "red";
+    })
+
+
+</script>
+</body>
+</html>
