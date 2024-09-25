@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="prod-pic">
+    <img src="../image/coffee-pink.jpg" id="cup" width="200" onclick="displaySrc()">
+</div>
+
+<script>
+    function displaySrc() {
+        const img = document.getElementById("cup");
+        alert("이미지소스: " + img.src);
+    }
+</script>
+</body>
+</html>
