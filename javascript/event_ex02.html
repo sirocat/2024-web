@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="../image/cup-1.png" id="c1" alt="컵">
+<script>
+    let cup = document.querySelector("#c1");
+    let iscup = true;
+
+    cup.addEventListener("click", () => {
+        if (iscup) {
+            cup.src = "../image/cup-2.png";
+        } else {
+            cup.src = "../image/cup-1.png";
+        }
+        iscup = !iscup; // 상태 토글
+    });
+</script>
+</body>
+</html>
