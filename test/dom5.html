@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="prod-pic">
+    <img src="../image/coffee-pink.jpg" id="cup" width="200" onclick="displaySrc()">
+</div>
+<script>
+    function displaySrc(){
+        let cup = document.querySelector("#cup");
+        alert(`이미지 소스: ${cup.getAttribute("src")}`);
+    }
+</script>
+</body>
+</html>
