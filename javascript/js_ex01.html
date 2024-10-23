@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,37 +8,36 @@
     </style>
 </head>
 <body>
-    <div id="galleryZone">
-        <p><img src="../image/mov01.jpg" id="photo" alt=""></p>
-        <p>
-            <button onclick="gallery(0)">이전</button>
-            <button onclick="gallery(1)">다음</button>
-        </p>
-    </div>
+<div id="galleryZone">
+    <p><img src="../image/mov01.jpg" id="photo" alt="" /></p>
+    <p>
+        <button onclick="gallery(0)">이전</button>
+        <button onclick="gallery(1)">다음</button>
+    </p>
+</div>
 </body>
 
 <script>
-    let ej = 1;
-    const de = 8;
+    let num = 1;
 
-    function gallery(direction) {
-        if (direction === 1) {
-            if (ej === de) {
+    function gallery(dir){
+        if(dir === 1){
+            if(num === 8){
                 alert("마지막 입니다!");
                 return;
-            } else {
-                ej++;
             }
+            num++;
         } else {
-            if (ej === 1) {
+            if(num === 1){
                 alert("처음 입니다!");
                 return;
-            } else {
-                ej--;
             }
+            num--;
         }
+
+        // num 값이 변경된 후 이미지 업데이트
         let imgTag = document.querySelector("#photo");
-        imgTag.setAttribute("src", `../image/mov0${ej}.jpg`);
+        imgTag.setAttribute("src", `../image/mov0${num}.jpg`);
     }
 </script>
 </html>

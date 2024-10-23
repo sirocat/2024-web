@@ -15,13 +15,16 @@
 </div>
 
 <script>
-    let smallCup = document.querySelector("#cup");
-    let bigImages = document.querySelectorAll(".big");
-    bigImages.forEach(image => {
-        image.addEventListener("click", () => {
-            smallCup.src = image.src;
-        });
-    });
+    let cup = document.querySelector("#cup");
+    let bigPics = document.querySelectorAll(".big");
+
+    const changePic = function (){
+        let newSrc = this.src;
+        cup.setAttribute("src",newSrc);
+    }
+    for (const pic of bigPics){
+        pic.addEventListener("click",changePic);
+    }
 </script>
 </body>
 </html>
