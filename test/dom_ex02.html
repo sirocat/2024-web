@@ -14,15 +14,17 @@
     <li class="even">다섯 번째 아이템이요!</li>
 </ul>
 <script>
-    // 클래스 선택 후 스타일 적용
+    // 클래스 선택 후 스타일 적용 (forEach 사용)
     let items = document.querySelectorAll(".even");
-    for (const item of items) {
+    items.forEach((item) => {
         item.style.color = "blue";
-    }
+    });
 
     // ID 선택 후 스타일 적용
     let rItem = document.querySelector("#first");
     rItem.style.color = "red";
 </script>
+
+
 </body>
 </html>

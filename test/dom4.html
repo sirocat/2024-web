@@ -11,14 +11,14 @@
 <img src="" alt="" class="rect">
 
 <script>
-    const rects = document.querySelectorAll(".rect");
-
-    rects.forEach((rec,i)=>{
-        const width = (i+1)*100;
-        const src = "../image/cat1.jpg";
-        rec.setAttribute("src",src);
+    const rect = document.querySelectorAll(".rect");
+    rect.forEach((rec,i)=>{
+        let width = (i+1) * 100;
+        let src = "../image/cat1.jpg";
         rec.setAttribute("width",width);
-    });
+        rec.setAttribute("src",src);
+
+    })
 </script>
 </body>
 </html>

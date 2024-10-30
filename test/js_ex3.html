@@ -30,16 +30,16 @@
     </table>
 
     <script>
-        function cal(op = '*'){
-            let n1 = Number(document.querySelector('#num1').value);
-            let n2 = Number(document.querySelector('#num2').value);
+        function cal(op = "*"){
+            let num1 = Number(document.querySelector("#num1").value);
+            let num2 = Number(document.querySelector("#num2").value);
             switch (op){
-                case "+" : sum = n1+n2; break;
-                case "-" : sum = n1-n2; break;
-                case "*" : sum = n1*n2; break;
-                case "/" : sum = n1/n2; break;
+                case "+" : sum = num1 + num2; break;
+                case "-" : sum = num1 - num2; break;
+                case "*" : sum = num1 * num2; break;
+                case "/" : sum = num1 / num2; break;
             }
-            document.querySelector('#result').value = sum;
+            document.querySelector("#result").value = sum;
         }
     </script>
 

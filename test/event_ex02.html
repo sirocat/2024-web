@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="../image/cup-1.png" id="c1" alt="컵">
+    <script>
+        let cup = document.querySelector("#c1");
+        let redcup = true;
+
+        cup.addEventListener("click",()=>{
+            if(redcup){
+                cup.setAttribute("src","../image/cup-2.png");
+                redcup = false;
+            }else{
+                cup.setAttribute("src","../image/cup-1.png");
+                redcup = true;
+            }
+
+        });
+    </script>
+</body>
+</html>

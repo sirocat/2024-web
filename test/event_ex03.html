@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="small">
+    <img src="../image/coffee-pink.jpg" alt="에디오피가 게댑" id="cup" width="200" height="200">
+    <div id="big">
+        <img src="../image/coffee-pink.jpg" class="big" >
+        <img src="../image/coffee-blue.jpg" class="big" >
+        <img src="../image/coffee-gray.jpg" class="big" >
+    </div>
+</div>
+
+<script>
+    let cup = document.querySelector("#cup");
+    let bigpics = document.querySelectorAll(".big");
+
+
+    bigpics.forEach((pics)=>{
+        pics.addEventListener("click",changePic);
+    });
+
+    function changePic(){
+
+        cup.setAttribute("src",this.src);
+    }
+</script>
+</body>
+</html>
